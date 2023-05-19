@@ -1,7 +1,7 @@
 package com.example.coding;
 //피보나치 재귀(메모이제이션)
 public class Main7_4 {
-    static int[] fibo;// 배열을 선언해서 담아줌 (1차적인 시간복잡도 개선)
+     static int[] fibo;// 배열을 선언해서 담아줌 (1차적인 시간복잡도 개선)
 
     public int DFS(int n){
 
