@@ -1,6 +1,5 @@
 package com.example.coding;
-//이진트리 순회(깊이 우선 탐색)
-
+//부분집합 구하기 (DFS)
 public class Main7_6 {
     static int n;
     static int[] ch;
@@ -13,10 +12,10 @@ public class Main7_6 {
             if(tmp.length()>0) System.out.println(tmp);
 
         }else{
-            ch[L]=1;
-            DFS(L+1);
-            ch[L]=0;
-            DFS(L+1);
+            ch[L]=1; //사용하는 원소
+            DFS(L+1);//왼쪽으로 뻣는 트리
+            ch[L]=0; //사용하지 않는 원소
+            DFS(L+1);//오른쪽으로 뻣는 트리
         }
     }
 
