@@ -2,16 +2,6 @@ package com.example.coding;
 //이진트리 순회(깊이 우선 탐색)
 
 
-class Node {
-    int data;
-    Node lt;
-    Node rt;
-    public Node(int val) {
-        data = val;
-        lt = rt = null;
-    }
-}
-
 public class Main7_5 {
     Node root;
 

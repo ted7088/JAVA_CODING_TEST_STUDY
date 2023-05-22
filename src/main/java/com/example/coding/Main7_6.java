@@ -24,7 +24,5 @@ public class Main7_6 {
         n=3;
         ch=new int[n+1];
         T.DFS(1);
-
-
     }
 }
