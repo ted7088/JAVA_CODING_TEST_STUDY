@@ -1,38 +1,48 @@
 package com.repeat.coding;
 
-import com.example.coding.Node;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class Main_re_7_9 {
-    Node root;
-    public int BFS(Node root){
-        Queue<Node> Q = new LinkedList<>();
-        Q.offer(root);
 
+    private int answer=0;
+    private int[] dis = {1,-1,5}; //움직일 수 있는 거리
+    int[] ch;
+    Queue<Integer> Q = new LinkedList<>();
+
+    public int BFS(int s,int e){
+
+        ch = new int[10001];
+        ch[s]=1;
+        Q.offer(s);
         int L=0;
+
         while (!Q.isEmpty()){
             int len = Q.size();
             for(int i=0;i<len;i++){
-                Node cur = Q.poll();
-                if(cur.lt==null && cur.rt==null) return L;
-                if(cur.lt!=null) Q.offer(cur.lt);
-                if(cur.rt!=null) Q.offer(cur.rt);
+                int x = Q.poll();
+                for(int j=0;j<3;j++){
+                    int nx = x+dis[j];
+                    if(nx>=1 && nx<=10000 && ch[nx]==0){
+                        ch[nx]=1;
+                        Q.offer(nx);
+                    }
+
+                }
             }
-            L++;
         }
-        return 0;
+
+
+
+        return answer;
     }
     public static void main(String[] args) {
-        Main_re_7_9 tree = new Main_re_7_9();
-        tree.root = new Node(1);
-        tree.root.lt = new Node(2);
-        tree.root.rt = new Node(3);
-        tree.root.lt.lt = new Node(4);
-        tree.root.lt.rt = new Node(5);
-        System.out.println(tree.BFS(tree.root));
+        Main_re_7_9 T = new Main_re_7_9();
+        Scanner kb = new Scanner(System.in);
+        int s = kb.nextInt();
+        int e = kb.nextInt();
+        System.out.println(T.BFS(s,e));
 
     }
 }
