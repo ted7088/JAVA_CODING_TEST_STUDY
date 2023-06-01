@@ -6,7 +6,6 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Main7_12 {
-
     static int  n, m , answer=0;
     static int[][] graph;
     static int [] ch;
@@ -17,7 +16,7 @@ public class Main7_12 {
                 if(graph[v][i]==1 && ch[i]==0){
                     ch[i]=1;
                     DFS(i);
-                    ch[i]=0;// 호출 취소
+                    ch[i]=0;// 백을 할 경우 ch을 풀어야 구분이 가능
                 }
             }
         }
@@ -30,7 +29,8 @@ public class Main7_12 {
         n=kb.nextInt();
         m=kb.nextInt();
         graph=new int[n+1][n+1];
-        ch=new int[n+1];
+        ch=new int[n+1]; //체크하는 배열
+
         for(int i=0;i<m;i++){
             int a=kb.nextInt();
             int b=kb.nextInt();
