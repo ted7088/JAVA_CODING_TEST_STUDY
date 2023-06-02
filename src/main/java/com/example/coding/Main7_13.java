@@ -46,7 +46,5 @@ public class Main7_13 {
         T.DFS(1);;
         System.out.println(answer);
 
-
-
     }
 }
