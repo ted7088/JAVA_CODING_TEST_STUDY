@@ -14,8 +14,8 @@ public class Main7_13 {
     public void DFS(int v){
         if(v==n) answer++;
         else{
-            for(int nv : graph.get(v)){
-                if(ch[nv]==0){
+            for(int nv : graph.get(v)){  //v번 arraylist를 nv에 확인
+                if(ch[nv]==0){//방문 했는지 여부 확인
                     ch[nv]=1;
                     DFS(nv);
                     ch[nv]=0;

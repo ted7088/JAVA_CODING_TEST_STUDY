@@ -21,6 +21,7 @@ public class Main7_14 {
 
         while(!Q.isEmpty()) {
             int cv = Q.poll(); //큐에서 꺼낸 정점: cv
+            System.out.println("cv:"+cv);
 
             //cv가 갈 수 있는 정점 순회
             for(int nv : graph.get(cv)) {
