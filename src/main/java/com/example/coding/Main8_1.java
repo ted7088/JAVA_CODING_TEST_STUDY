@@ -1,5 +1,4 @@
 package com.example.coding;
-//그래프 최단거리(BFS) - 레벨로 푸는 법(정석)
 
 import java.util.Scanner;
 
