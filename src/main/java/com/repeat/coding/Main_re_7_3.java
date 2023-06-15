@@ -10,7 +10,7 @@ public class Main_re_7_3 {
     }
 
     public static void main(String[] args) {
-        Main7_3 T = new Main7_3();
+        Main_re_7_3 T = new Main_re_7_3();
         System.out.println(T.DFS(5));
     }
 }

@@ -1,4 +1,7 @@
 package com.example.coding;
+
+import com.repeat.coding.Main_re_7_2;
+
 //이진수 출력 (재귀)
 public class Main7_2 {
     public void DFS(int n){
@@ -10,7 +13,7 @@ public class Main7_2 {
     }
 
     public static void main(String[] args) {
-        Main7_2 T = new Main7_2();
+        Main_re_7_2 T = new Main_re_7_2();
         T.DFS(11);
     }
 }

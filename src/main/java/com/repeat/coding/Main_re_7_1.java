@@ -12,7 +12,7 @@ public class Main_re_7_1 {
         }
     }
     public static void main(String[] args) {
-        Main7_1 T=new Main7_1();
+        Main_re_7_1  T=new  Main_re_7_1();
         T.DFS(3);
     }
 }

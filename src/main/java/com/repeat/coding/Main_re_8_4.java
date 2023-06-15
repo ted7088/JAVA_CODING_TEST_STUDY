@@ -1,10 +1,10 @@
-package com.example.coding;
+package com.repeat.coding;
+
+import com.example.coding.Main8_4;
 
 import java.util.Scanner;
 
-//중복순열
-public class Main8_4 {
-
+public class Main_re_8_4 {
     static int[] pm;
     static int n,m;
     public void DFS(int L){
@@ -20,7 +20,7 @@ public class Main8_4 {
 
     }
     public static void main(String[] args) {
-        Main8_4 T = new Main8_4();
+        Main_re_8_4  T = new Main_re_8_4 ();
         Scanner kb = new Scanner(System.in);
 
         n=kb.nextInt();
@@ -31,5 +31,4 @@ public class Main8_4 {
 
 
     }
-
 }

@@ -1,9 +1,12 @@
-package com.example.coding;
+package com.repeat.coding;
 
-import java.util.*;
+import com.example.coding.Main8_5;
 
-//동전교환
-public class Main8_5 {
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Main_re_8_5 {
     static int n, m;
     static int answer = Integer.MAX_VALUE;
 
@@ -23,7 +26,7 @@ public class Main8_5 {
 
 
     public static void main(String[] args) {
-        Main8_5 T = new Main8_5();
+        Main_re_8_5 T = new  Main_re_8_5();
         Scanner kb = new Scanner(System.in);
 
         n=kb.nextInt();
@@ -40,5 +43,4 @@ public class Main8_5 {
 
 
     }
-
 }

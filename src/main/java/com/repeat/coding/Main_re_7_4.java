@@ -16,7 +16,7 @@ public class Main_re_7_4 {
     }
 
     public static void main(String[] args) {
-        Main7_4 T = new Main7_4();
+        Main_re_7_4 T = new Main_re_7_4();
         int n=45;
         fibo=new int[n+1];
         T.DFS(n);
