@@ -32,7 +32,6 @@ public class Main8_8 {
                 }
             }
         }
-
     }
 
 
@@ -49,11 +48,7 @@ public class Main8_8 {
         for(int i=0; i<n;i++){
             b[i]=T.combi(n-1,i);
         }
-
         T.DFS(0,0);
-
-
-
     }
 
 }
