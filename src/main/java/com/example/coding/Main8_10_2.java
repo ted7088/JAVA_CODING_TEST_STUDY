@@ -18,7 +18,7 @@ public class Main8_10_2 {
                 if(nx>=1 && nx<=7 && ny>=1 && ny<=7 && board[nx][ny]==0){ // 통로가 지나갈 수 있는 경로
                     board[nx][ny]=1; //갔으니깐 1로 체크 (방문)
                     DFS(nx,ny);
-                    board[nx][ny]=0;
+                    board[nx][ny]=0;  // 다시 백 시킴
                 }
             }
         }
