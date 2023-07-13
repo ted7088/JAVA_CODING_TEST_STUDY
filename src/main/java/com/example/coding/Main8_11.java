@@ -1,7 +1,6 @@
 package com.example.coding;
 
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 import java.util.Scanner;
 
@@ -32,13 +31,6 @@ public class Main8_11 {
 
     }
 
-    class Point2 {
-        public int x, y;
-
-        Point2(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
 
         public static void main(String[] args) {
 
@@ -51,11 +43,19 @@ public class Main8_11 {
                     board[i][j] = kb.nextInt();
                 }
             }
-
+//            System.out.println("dd");
             T.BFS(1, 1);
             if (dis[7][7] == 0) System.out.println(-1);
             else System.out.println(dis[7][7]);
 
         }
     }
+class Point2 {
+    public int x, y;
+
+    Point2(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
 }
