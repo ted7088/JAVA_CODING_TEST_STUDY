@@ -29,6 +29,7 @@ public class Main_re_6_3 {
             }
             arr[j+1]=tmp;
         }
+
         return arr;
     }
 }
