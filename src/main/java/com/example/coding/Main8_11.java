@@ -36,6 +36,7 @@ public class Main8_11 {
 
             Main8_11 T = new Main8_11();
             Scanner kb = new Scanner(System.in);
+
             board = new int[8][8];
             dis = new int[8][8];
             for (int i = 1; i <= 7; i++) {
