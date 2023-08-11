@@ -1,7 +1,6 @@
 package com.repeat.coding;
 
 import com.example.coding.Main5_7;
-import com.example.coding.Person;
 
 import java.util.LinkedList;
 import java.util.Queue;
