@@ -1,6 +1,5 @@
 package com.repeat.coding;
 
-import com.example.coding.Main8_7_2;
 
 import java.util.Scanner;
 

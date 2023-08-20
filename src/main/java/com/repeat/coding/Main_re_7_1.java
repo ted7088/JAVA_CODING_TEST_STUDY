@@ -1,7 +1,6 @@
 package com.repeat.coding;
 
-import com.example.coding.Main7_1;
-import com.example.coding.Main7_3;
+
 
 public class Main_re_7_1 {
     public void DFS(int n){

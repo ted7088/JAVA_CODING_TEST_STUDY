@@ -1,7 +1,5 @@
 package com.repeat.coding;
 
-import com.example.coding.Main8_5;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;

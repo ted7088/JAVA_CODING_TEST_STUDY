@@ -1,6 +1,6 @@
 package com.repeat.coding;
 
-import com.example.coding.Main6_8;
+
 
 import java.util.Arrays;
 import java.util.Scanner;

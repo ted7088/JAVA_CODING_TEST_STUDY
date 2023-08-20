@@ -1,14 +1,13 @@
 package com.repeat.coding;
 
-
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main_re_5_5 {
+public class Main_re_5_4 {
 
     public static void main(String[] args) {
 
-        Main_re_5_5 T = new Main_re_5_5();
+        Main_re_5_4 T = new Main_re_5_4();
 
         Scanner sc = new Scanner(System.in);
 

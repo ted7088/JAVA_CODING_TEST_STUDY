@@ -1,9 +1,5 @@
 package com.repeat.coding;
 
-import com.example.coding.Node;
-
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class Main_re_7_12 {

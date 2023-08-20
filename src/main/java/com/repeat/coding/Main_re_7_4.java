@@ -1,7 +1,5 @@
 package com.repeat.coding;
 
-import com.example.coding.Main7_4;
-import com.example.coding.Node;
 
 public class Main_re_7_4 {
     static int[] fibo;// 배열을 선언해서 담아줌 (1차적인 시간복잡도 개선)

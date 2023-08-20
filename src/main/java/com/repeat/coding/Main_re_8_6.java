@@ -1,9 +1,6 @@
 package com.repeat.coding;
 
-import com.example.coding.Main8_6;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Main_re_8_6 {
