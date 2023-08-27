@@ -15,6 +15,8 @@ public class Main_re_5_2 {
         String str = sc.next();
 
         System.out.println(T.solution(str));
+
+        System.out.println(T.solution(str));
     }
 
 
