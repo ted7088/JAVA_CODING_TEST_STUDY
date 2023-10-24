@@ -21,10 +21,7 @@ class Car extends Vehicle{
 	public String getName(byte val[]) {
 		return "Car name:"+val;
 	}
-//	public String getName() {
-//		System.out.println("하이루~");
-//		return null;
-//	}
+
 }
 
 public class test5{
