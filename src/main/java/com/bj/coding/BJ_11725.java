@@ -1,4 +1,4 @@
-package com.example.coding;
+package com.bj.coding;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
