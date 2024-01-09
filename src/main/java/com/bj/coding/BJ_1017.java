@@ -141,7 +141,7 @@ public class BJ_1017 {
     }
 
     public static void main(String[] args) throws Exception {
-        new Main().solution();
+        new BJ_1017().solution();
     }
 
 }
