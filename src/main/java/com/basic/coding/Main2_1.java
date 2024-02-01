@@ -14,6 +14,9 @@ public class Main2_1 {
             if (arr[i]>arr[i-1]) answer.add(arr[i]);
         }
 
+
+
+
         return answer;
     }
 
