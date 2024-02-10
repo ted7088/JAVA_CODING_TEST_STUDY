@@ -13,7 +13,7 @@ public class Main2_8 {
             int cnt=1;
 
             for(int j=0;j<n;j++){
-                if(arr[j]>arr[i]) cnt++;
+                if(arr[j]>arr[i]) cnt++;//
             }
             answer[i]=cnt;
         }
