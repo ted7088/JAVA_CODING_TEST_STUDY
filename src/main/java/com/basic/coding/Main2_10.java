@@ -11,6 +11,7 @@ public class Main2_10 {
         int answer = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
+
                 boolean flag = true;
 
                 for (int k = 0; k < 4; k++) {
@@ -25,7 +26,6 @@ public class Main2_10 {
 
             }
         }
-
 
         return answer;
 
