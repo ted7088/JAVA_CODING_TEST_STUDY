@@ -11,15 +11,20 @@ public class Main4_3 {
         ArrayList<Integer> answer = new ArrayList<>();
         HashMap<Integer, Integer> HM = new HashMap<>();
 
-        for (int i = 0; i < k - 1; i++) {
-            HM.put(arr[i], HM.getOrDefault(arr[i], 0) + 1);
+        for(int i=0; i<k-1; i++){
+            HM.put(arr[i], HM.getOrDefault(arr[i],0)+1);
         }
-        int lt = 0;
-        for (int rt = k - 1; rt < n; rt++) {
-            HM.put(arr[rt], HM.getOrDefault(arr[rt], 0)+1);
+        int lt=0;
+        for(int rt=k-1; rt<n; rt++){
+            HM.put(arr[rt], HM.getOrDefault(arr[rt],0)+1);
+            System.out.println(HM);
             answer.add(HM.size());
-        }
 
+            HM.put(arr[lt], HM.get(arr[lt])-1); //하나 감소시킴 lt를
+
+            if(HM.get(arr[lt])==0) HM.remove(arr[lt]);
+            lt++;
+        }
 
         return answer;
     }
