@@ -7,19 +7,18 @@ public class Main5_2 {
 
     public String solution(String str){
 
-        String answer="YES";
+        String answer="";
         Stack<Character> stack = new Stack<>();
-        for(char x: str.toCharArray()){
-            if(x=='(') stack.push(x);
-            else{
-                if(stack.isEmpty()){
-                    return "NO";
-                }
-                stack.pop();
+
+        for(char x : str.toCharArray()){
+            if(x==')') {
+                while (stack.pop()!='('); // 여는 괄호일떄까지 꺼낸다.
+            }else{
+                stack.push(x);
             }
         }
+        for(int i=0; i< stack.size(); i++) answer+=stack.get(i);
 
-        if(!stack.isEmpty()) return "NO";
 
         return answer;
     }
