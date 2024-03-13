@@ -20,7 +20,8 @@ public class Main5_3 {
                         answer+=2;
                         stack.pop();
                     }else stack.push(tmp);
-                    break;
+
+                    break;//for문을 다시 돌면 안됨
                 }
             }
         }
