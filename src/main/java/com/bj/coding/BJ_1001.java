@@ -9,7 +9,7 @@ public class BJ_1001 {
         int A = in.nextInt();
         int B = in.nextInt();
 
-        System.out.println(A - B);
+        System.out.println(A-B);
 
         in.close();
     }
