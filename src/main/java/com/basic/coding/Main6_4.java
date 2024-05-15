@@ -15,7 +15,7 @@ public class Main6_4 {
                 for (int i = size - 1; i >= 1; i--) {
                     cache[i] = cache[i - 1];
                 }
-                cache[0]= 0;
+                cache[0]= x;
             } else {
                 for (int i = pos; i >= 1; i--) {
                     cache[i] = cache[i - 1];

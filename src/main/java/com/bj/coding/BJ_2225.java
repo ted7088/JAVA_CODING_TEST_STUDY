@@ -27,6 +27,7 @@ public class BJ_2225 {
     }
 
     public static void main(String[] args) throws Exception {
+
         new BJ_2225().solution();
     }
 }
