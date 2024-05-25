@@ -7,6 +7,8 @@ public class Main6_4 {
 
         int[] cache = new int[size];
 
+        int add=0;
+
         for(int x : arr){
             int pos=-1;
             for(int i = 0; i<size; i++) if (x ==cache[i]) pos=i;
