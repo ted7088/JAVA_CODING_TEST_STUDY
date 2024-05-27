@@ -19,8 +19,7 @@ public class Main6_7 {
 
         }
         Collections.sort(arr);
-        for (Point o :
-                arr) {
+        for (Point o : arr) {
             System.out.println(o.x+" "+o.y);
         }
     }
