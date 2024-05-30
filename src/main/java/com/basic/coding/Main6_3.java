@@ -26,7 +26,6 @@ public class Main6_3 {
 
         Scanner kb = new Scanner(System.in);
 
-        int k= kb.nextInt();
         int n = kb.nextInt();
         int[] arr = new int[n];
 
