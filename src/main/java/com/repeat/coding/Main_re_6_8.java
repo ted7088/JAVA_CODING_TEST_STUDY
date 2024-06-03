@@ -1,15 +1,13 @@
 package com.repeat.coding;
 
 
-
 import com.basic.coding.Main6_8;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main_re_6_8 {
-    public int solution(int n, int m, int[] arr) {
-
+    private int solution(int n, int m, int[] arr) {
         int answer = 0;
 
         Arrays.sort(arr);
@@ -23,7 +21,7 @@ public class Main_re_6_8 {
                 break;
             }
             if (arr[mid] > m) rt = mid - 1;
-            else lt = mid+1;
+            else lt = mid + 1;
 
         }
         return answer;
@@ -36,12 +34,12 @@ public class Main_re_6_8 {
 
         int n = kb.nextInt();
         int m = kb.nextInt();
-
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) arr[i] = kb.nextInt();
+
         System.out.println(T.solution(n, m, arr));
-
-
     }
+
+
 }
