@@ -45,11 +45,12 @@ public class Main6_9 {
     }
 
     public int count(int[] arr , int capacity) {
-        int cnt = 1, sum = 0;
+        int cnt = 1;  //dvd 장수
+        int sum = 0;  //노래가 얼마나 저장되어 있는지 차지하고 있는 용량
 
         for (int x : arr) {
-            if (sum + x > capacity) {
-                cnt++;
+            if (sum + x > capacity) { //용량을 초과해버리면
+                cnt++; //새로운 장수가 필요함
                 sum = x;
             } else sum += x;
         }
