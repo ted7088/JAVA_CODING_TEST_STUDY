@@ -21,8 +21,7 @@ public class Main6_10 {
     private int solution(int n, int c, int[] arr) {
 
         int answer=0;
-        Arrays.sort(arr);
-
+        Arrays.sort(arr); //정렬
         int lt=1;
         int rt=arr[n-1];
 
