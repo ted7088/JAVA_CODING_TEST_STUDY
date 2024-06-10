@@ -21,8 +21,7 @@ public class Main6_10 {
     private int solution(int n, int c, int[] arr) {
 
         int answer=0;
-        Arrays.sort(arr);
-
+        Arrays.sort(arr); //정렬
         int lt=1;
         int rt=arr[n-1];
 
@@ -45,7 +44,7 @@ public class Main6_10 {
     private int count(int[] arr, int dist) {
 
         int cnt=1; //말의 수
-        int ep=arr[0];
+        int ep=arr[0];  //시작점
 
         for(int i=1; i<arr.length; i++){
             if(arr[i]-ep>=dist){
