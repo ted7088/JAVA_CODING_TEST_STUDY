@@ -15,7 +15,7 @@ public class Main7_5 {
     public void DFS(Node root){
         if(root==null) return;
         else{
-            System.out.println(root.data+" ");
+            System.out.print(root.data+" ");
             DFS(root.lt);
             DFS(root.rt);
 
