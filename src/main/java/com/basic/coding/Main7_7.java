@@ -25,7 +25,7 @@ public class Main7_7 {
 
         while (!Q.isEmpty()){
             int len=Q.size();
-//            System.out.println(L+" : ");
+            System.out.print(L+" : ");
 
             for(int i=0; i<len; i++){
                 Node cur = Q.poll();
@@ -35,8 +35,9 @@ public class Main7_7 {
                 if(cur.rt!=null) Q.offer(cur.rt);
 
             }
+            L++;
+            System.out.println();
         }
-
 
     }
     public static void main(String[] args) {
