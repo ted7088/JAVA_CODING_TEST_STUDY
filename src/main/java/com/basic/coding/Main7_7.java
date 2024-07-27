@@ -28,7 +28,7 @@ public class Main7_7 {
             System.out.print(L+" : ");
 
             for(int i=0; i<len; i++){
-                Node cur = Q.poll();
+                Node cur = Q.poll();//샇기
 
                 System.out.print(cur.data+" ");
                 if(cur.lt!=null) Q.offer(cur.lt);
