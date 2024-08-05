@@ -1,9 +1,11 @@
-package com.repeat.coding;
+package com.basic.coding;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main_re_7_13 {
+public class Main7_13 {
+
     static int n, m, answer=0;
     static ArrayList<ArrayList<Integer>> graph;
 
@@ -22,27 +24,30 @@ public class Main_re_7_13 {
         }
 
     }
+
     public static void main(String[] args) {
-        Main_re_7_13 T = new Main_re_7_13();
+        Main7_13 T = new Main7_13();
         Scanner kb = new Scanner(System.in);
         n=kb.nextInt();
         m=kb.nextInt();
 
-        graph = new ArrayList<>();
+        graph=new ArrayList<>();
 
         for(int i=0;i<=n;i++){
             graph.add(new ArrayList<Integer>());
         }
         ch=new int[n+1];
 
-        for(int i=0;i<m;i++){
+        for(int i=0; i<m;i++){
             int a = kb.nextInt();
             int b = kb.nextInt();
             graph.get(a).add(b);
         }
-        ch[1]=1;
-        T.DFS(1);;
-        System.out.println(answer);
 
+        ch[1]=1;
+        T.DFS(1);
+        System.out.println(answer);
     }
+
 }
+
