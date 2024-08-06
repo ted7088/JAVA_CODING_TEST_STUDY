@@ -25,8 +25,8 @@ public class Main_re_7_13 {
     public static void main(String[] args) {
         Main_re_7_13 T = new Main_re_7_13();
         Scanner kb = new Scanner(System.in);
-        n=kb.nextInt();
-        m=kb.nextInt();
+        n=kb.nextInt();// 처음 갯수
+        m=kb.nextInt();//
 
         graph = new ArrayList<>();
 
