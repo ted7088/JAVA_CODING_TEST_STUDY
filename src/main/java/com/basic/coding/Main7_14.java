@@ -40,7 +40,7 @@ public class Main7_14 {
 
         n = kb.nextInt(); //입력받을 수의 값
         m = kb.nextInt(); //갯수
-        graph = new ArrayList<ArrayList<Integer>>();
+        graph = new ArrayList<ArrayList<Integer>>(); //어ㅜ레이 리스트 안에 어레이 리스트 생성
 
         for(int i=0; i<=n;i++){
             graph.add(new ArrayList<Integer>());
