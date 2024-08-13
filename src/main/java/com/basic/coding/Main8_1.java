@@ -28,7 +28,7 @@ public class Main8_1 {
 
         for (int i = 0; i < N; i++) {
             arr[i] = sc.nextInt();
-//            totalSum += arr[i];
+            totalSum += arr[i];
         }
 
         DFS(0, 0, 0);
