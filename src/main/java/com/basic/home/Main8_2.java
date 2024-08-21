@@ -2,6 +2,8 @@ package com.basic.home;
 
 import java.util.Scanner;
 
+
+//다른방식으로 풀어보기
 public class Main8_2 {
     static int C, N;
     static int[] weights;
@@ -26,7 +28,6 @@ public class Main8_2 {
         System.out.println(maxWeight);
     }
 
-    // DFS 메서드
     private static void dfs(int index, int currentWeight) {
         // 현재 무게가 최대 적재량을 초과하면 종료
         if (currentWeight > C) {
