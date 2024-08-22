@@ -4,7 +4,7 @@ package com.basic.coding;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-
+//dfs 기초
 public class Main7_12 {
 
     static int n, m, answer=0;
