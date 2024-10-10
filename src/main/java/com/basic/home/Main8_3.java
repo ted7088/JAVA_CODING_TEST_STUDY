@@ -9,6 +9,7 @@ public class Main8_3 {
     boolean flag= false;
 
     public void DFS(int L , int sum, int time, int[] ps , int[] pt){
+
         if(time>m) return;
 
         if(L==n){
@@ -17,7 +18,6 @@ public class Main8_3 {
             DFS(L+1, sum+ps[L], time+pt[L], ps,pt);
             DFS(L+1, sum, time, ps , pt);
         }
-
 
     }
 
@@ -37,7 +37,6 @@ public class Main8_3 {
             a[i]=kb.nextInt();
             b[i]=kb.nextInt();
         }
-
 
         T.DFS(0,0,0,a,b);
 
