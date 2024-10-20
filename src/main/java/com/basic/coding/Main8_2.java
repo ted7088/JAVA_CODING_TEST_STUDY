@@ -2,6 +2,7 @@ package com.basic.coding;
 
 import java.util.Scanner;
 
+//dfs 활용
 public class Main8_2 {
     static int answer =Integer.MIN_VALUE, c, n;
 
