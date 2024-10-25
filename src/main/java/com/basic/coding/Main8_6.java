@@ -35,9 +35,10 @@ public class Main8_6 {
 
         answer = new int[m];
 
-        num= new int[n];
+        num = new int[n];
 
         for (int i = 0; i < n; i++) num[i] = sc.nextInt();
+
         ch = new int[n];
 
 
