@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Main8_7 {
 
-    int[][] dy = new int[35][35];
+    int[][] dy = new int[35][35]; //임의 배열 설정
 
     public int DFS(int n , int r ){
 
         if(dy[n][r]>0) return dy[n][r];
         if(n==r || r ==0) return 1;
-        else return dy[n][r] = DFS(n-1, r-1)+DFS(n-1,r);
+        else return dy[n][r] = DFS(n-1, r-1)+DFS(n-1,r); //dfs 활용
 
     }
 
