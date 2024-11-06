@@ -15,7 +15,7 @@ public class Main8_10 {
                 int nx=x+dx[i];
                 int ny=y+dy[i];
                 if(nx>=1&&nx<=7&&ny>=1&&ny<=7&&board[nx][ny]==0){
-                    board[nx][ny]=1;//갔으니까 1로
+                    board[nx][ny]=1;// 방문시 1로 변경
                     DFS(nx,ny);
                     board[nx][ny]=0; // 백트레킹 더이상 갈곳 없을 때 다시 돌아와서 하게 해줌
 
