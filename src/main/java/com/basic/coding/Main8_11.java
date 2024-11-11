@@ -50,7 +50,7 @@ public class Main8_11 {
         T.BFS(0, 0); // (0,0)에서 시작
 
         // 결과 출력
-        if (dis[6][6] == 0) System.out.println(-1); // 도착할 수 없는 경우
+        if (dis[6][6] == 0) System.out.println(-1);
         else System.out.println(dis[6][6]); // 최단 거리 출력
     }
 }
