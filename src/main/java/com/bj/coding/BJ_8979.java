@@ -35,26 +35,26 @@ public class BJ_8979 {
 
             // 선택 정렬
             for (int i = 0; i < n - 1; i++) {
-                int maxIdx = i;
+                int maxid = i;
                 for (int j = i + 1; j < n; j++) {
-                    if (isBetter(countries[j], countries[maxIdx])) {
-                        maxIdx = j;
+                    if (isBetter(countries[j], countries[maxid])) {
+                        maxid = j;
                     }
                 }
                 // Swap
                 Country temp = countries[i];
-                countries[i] = countries[maxIdx];
-                countries[maxIdx] = temp;
+                countries[i] = countries[maxid];
+                countries[maxid] = temp;
             }
 
             // 등수 계산
             int rank = 1;
             for (int i = 0; i < n; i++) {
                 if (i > 0 && !isSameRank(countries[i], countries[i - 1])) {
-                    rank = i + 1;
+                    rank = i + 1; //순위가 바뀌면 현재 국가의 순위 업데이트
                 }
                 if (countries[i].id == k) {
-                    System.out.println(rank);
+                    System.out.println(rank); //출력
                     break;
                 }
             }

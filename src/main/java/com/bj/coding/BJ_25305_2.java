@@ -19,8 +19,8 @@ public class BJ_25305_2 {
         }
 
         for(int i=1; i<n; i++){
-            int key=scores[i];
-            int j=i-1;
+            int key=scores[i];// 키값 설정
+            int j=i-1; //키와 비교 할 대상
 
             while (j>=0 && scores[j]<key){
                 scores[j+1]=scores[j];
@@ -31,7 +31,7 @@ public class BJ_25305_2 {
 
         System.out.println(scores[k-1]);
         
-        
+        sc.close();
     }
 
 }
