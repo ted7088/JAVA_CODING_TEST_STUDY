@@ -1,38 +1,45 @@
 package com.basic.home;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main10_5 {
-    static int C, N , maxWeight = 0;
-    static int[] dogs;
 
-    public static void DFS(int index, int sum){
-
-        if(sum>C) return;
-        if(index==N){
-            maxWeight= Math.max(maxWeight,sum);
-        }else{
-            DFS(index+1, sum+dogs[index]);
-            DFS(index+1,sum);
-        }
-
-    }
+    static int n, m;
+    static int[] coins;
+    static int minCoins = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        n=sc.nextInt();
+        coins = new int[n];
 
-        C=sc.nextInt();
-        N=sc.nextInt();
-        dogs=new int[N];
-
-        for(int i=0; i<N; i++){
-            dogs[i] = sc.nextInt();
+        for(int i=0; i<n; i++){
+            coins[i] = sc.nextInt();
         }
 
-        DFS(0,0);
-        System.out.println(maxWeight);
+        Arrays.sort(coins);
+        m=sc.nextInt();
 
+        DFS(0,0);
+
+        System.out.println(minCoins);
+    }
+
+    private static void DFS(int level, int sum) {
+
+        if (sum>m) return;
+        if(level>=minCoins) return;
+        if(sum==m){
+            minCoins = Math.min(minCoins, level);
+            return;
+        }
+        for(int i=0; i<n; i++){
+            DFS(level+1, sum+coins[i]);
+        }
 
     }
 }
