@@ -7,54 +7,52 @@ import java.util.Scanner;
 public class Main11_3 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc =new Scanner(System.in);
         int N = sc.nextInt();
 
-        int[][] guest = new int[N][2];
+        int[][] guests =new int[N][2];
 
         for (int i = 0; i < N; i++) {
-            guest[i][0] = sc.nextInt();
-            guest[i][1] = sc.nextInt();
+            guests[i][0]=sc.nextInt();
+            guests[i][1]=sc.nextInt();
         }
-        sc.close();
 
-        int maxGuest = getMaxGuest(N, guest);
-
+        int maxGuest = getMaxGuest(N,guests);
         System.out.println(maxGuest);
+
     }
 
-    private static int getMaxGuest(int N, int[][] guest) {
+    private static int getMaxGuest(int N, int[][] guests) {
 
         List<Event> events = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            events.add(new Event(guest[i][0], 1));
-            events.add(new Event(guest[i][1], -1));
+            events.add(new Event(guests[i][0],1));
+            events.add(new Event(guests[i][1],-1));
         }
 
         events.sort((a, b) -> a.time == b.time ? a.type - b.type : a.time - b.time);
 
-        int maxGuest =0;
-        int currentGuest=0;
+        int maxGuests = 0;
+        int currentGuests = 0;
 
-        for(Event event : events){
-            currentGuest+=event.time;
-            maxGuest=Math.max(maxGuest, currentGuest);
+        for (Event event : events) {
+            currentGuests += event.type; // 도착하면 +1, 출발하면 -1
+            maxGuests = Math.max(maxGuests, currentGuests);
         }
 
-
-        return 0;
+        return maxGuests;
     }
 
-    static class Event {
+
+    static class Event{
         int time;
-        int type;  //도착 1 , 출발 -1
+        int type;
 
         public Event(int time, int type) {
             this.time = time;
             this.type = type;
         }
     }
-
 
 }
