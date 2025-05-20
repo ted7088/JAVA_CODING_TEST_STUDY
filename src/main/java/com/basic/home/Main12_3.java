@@ -1,7 +1,5 @@
 package com.basic.home;
 
-import javafx.scene.transform.MatrixType;
-
 import java.util.Scanner;
 
 public class Main12_3 {
