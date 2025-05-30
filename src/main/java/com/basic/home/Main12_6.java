@@ -24,7 +24,7 @@ public class Main12_6 {
 
         for (int i = 0; i < N; i++) {
             for (int j = M; j >= time[i]; j--) {
-                dp[j] = Math.max(dp[j], dp[j - time[i]] + score[i]);
+                dp[j] = Math.max(dp[j], dp[j - time[i]] + score[i]);  //점화식 사용
             }
         }
 
