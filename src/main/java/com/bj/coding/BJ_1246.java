@@ -24,7 +24,7 @@ public class BJ_1246 {
         for (int i = 0; i < M; i++) {
             int price = prices[i];
             int buyers = M - i;
-            int sellCount = Math.min(N, buyers);
+            int sellCount = Math.min(N, buyers); //최소값 생성
             int profit = price * sellCount;
 
             if (profit > maxProfit) {
