@@ -7,10 +7,12 @@ public class BJ_1003 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        dp[0][0] = 1;	// N=0 일 때의 0 호출 횟수
-        dp[0][1] = 0;	// N=0 일 때의 1 호출 횟수
-        dp[1][0] = 0;	// N=1 일 때의 0 호출 횟수
-        dp[1][1] = 1;	// N=1 일 때의 1 호출 횟수
+        //입력값 n을 통해서 출력 값 결정
+
+        dp[0][0] = 1;
+        dp[0][1] = 0;
+        dp[1][0] = 0;
+        dp[1][1] = 1;
 
         int T = in.nextInt();
 
