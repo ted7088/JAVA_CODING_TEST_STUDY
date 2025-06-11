@@ -24,6 +24,8 @@ public class BJ_1002 {
             int sumRSq = sumR * sumR;
             int diffRSq = diffR * diffR;
 
+            //메인 점과점 사이의 거리
+
             if (distSq == 0 && r1 == r2) {
                 // 두 원이 완전히 겹침
                 System.out.println(-1);
