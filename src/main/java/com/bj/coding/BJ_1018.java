@@ -5,83 +5,51 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class BJ_1018 {
-    public static boolean[][] arr;
-    public static int min = 64;
+    static String[] board;
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner in = new Scanner(System.in);
+        int N = sc.nextInt(); // 행
+        int M = sc.nextInt(); // 열
+        sc.nextLine(); // 버퍼 비우기
 
-        int N = in.nextInt();
-        int M = in.nextInt();
-
-        arr = new boolean[N][M];
-
-
-        // 배열 입력
+        board = new String[N];
         for (int i = 0; i < N; i++) {
-            String str = in.next();
+            board[i] = sc.nextLine();
+        }
 
-            for (int j = 0; j < M; j++) {
-                if (str.charAt(j) == 'W') {
-                    arr[i][j] = true;		// W일 때는 true
-                } else {
-                    arr[i][j] = false;		// B일 때는 false
-                }
+        int min = 64; // 8x8 최대 변경 횟수
 
+        for (int i = 0; i <= N - 8; i++) {
+            for (int j = 0; j <= M - 8; j++) {
+                min = Math.min(min, getRepaintCount(i, j));
             }
         }
 
-
-        int N_row = N - 7;
-        int M_col = M - 7;
-
-        for (int i = 0; i < N_row; i++) {
-            for (int j = 0; j < M_col; j++) {
-                find(i, j);
-            }
-        }
         System.out.println(min);
     }
 
+    // 8x8 시작 좌표 (x, y)에서 변경해야 할 칸 수 계산
+    static int getRepaintCount(int x, int y) {
+        String[] pattern = {"WBWBWBWB", "BWBWBWBW"};
+        int count1 = 0; // 시작이 'W'인 경우
+        int count2 = 0; // 시작이 'B'인 경우
 
-    public static void find(int x, int y) {
-        int end_x = x + 8;
-        int end_y = y + 8;
-        int count = 0;
-
-        boolean TF = arr[x][y];	// 첫 번째 칸의 색
-
-        for (int i = x; i < end_x; i++) {
-            for (int j = y; j < end_y; j++) {
-
-                // 올바른 색이 아닐경우 count 1 증가
-                if (arr[i][j] != TF) {
-                    count++;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                char current = board[x + i].charAt(y + j);
+                // 시작이 W인 경우 (패턴[0]부터 시작)
+                if (current != pattern[i % 2].charAt(j)) {
+                    count1++;
                 }
-
-                /*
-                 * 다음 칸은 색이 바뀌므로
-                 * true라면 false로, false 라면 true 로
-                 * 값을 변경한다.
-                 */
-                TF = (!TF);
+                // 시작이 B인 경우 (패턴[1]부터 시작)
+                if (current != pattern[(i + 1) % 2].charAt(j)) {
+                    count2++;
+                }
             }
-
-            TF = !TF;
         }
 
-        /*
-         *  첫 번째 칸을 기준으로 할 때의 색칠 할 개수(count)와
-         *  첫 번째 칸의 색의 반대되는 색을 기준으로 할 때의
-         *  색칠 할 개수(64 - count) 중 최솟값을 count 에 저장
-         */
-        count = Math.min(count, 64 - count);
-
-        /*
-         * 이전까지의 경우 중 최솟값보다 현재 count 값이
-         * 더 작을 경우 최솟값을 갱신
-         */
-        min = Math.min(min, count);
+        return Math.min(count1, count2);
     }
 }
