@@ -1,6 +1,7 @@
 package com.bj.coding;
 
 import java.util.Scanner;
+import java.util.*;
 
 public class BJ_1026 {
 
