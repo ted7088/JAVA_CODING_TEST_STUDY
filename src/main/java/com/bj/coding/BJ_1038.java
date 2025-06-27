@@ -25,6 +25,7 @@ public class BJ_1038 {
 
     // current: 현재까지 만든 수
     // lastDigit: 마지막으로 추가한 자리 (다음 자리수는 이보다 작은 수만 가능)
+    //앞자리만 생각해서 풀어보기
     public static void dfs(long current, int lastDigit) {
         list.add(current);
 
