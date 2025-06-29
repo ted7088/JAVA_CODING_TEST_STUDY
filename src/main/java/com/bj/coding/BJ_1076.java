@@ -8,6 +8,7 @@ public class BJ_1076 {
 
     public static void main(String[] args) {
         // 색상-숫자 매핑
+        //매핑 일단 통해서 설정
         Map<String, Integer> colorMap = new HashMap<>();
         colorMap.put("black", 0);
         colorMap.put("brown", 1);
