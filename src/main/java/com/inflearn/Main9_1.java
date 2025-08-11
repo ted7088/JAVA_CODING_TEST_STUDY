@@ -17,7 +17,7 @@ public class Main9_1 {
 
         if(L==n){
             if((total-sum) == sum){
-                answer = "YES";
+                answer = "YES"; //사항들 정리
                 flag = true;
             }
         }else{
