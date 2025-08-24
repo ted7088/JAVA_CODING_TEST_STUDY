@@ -28,8 +28,13 @@ public class Main9_3 {
         visited = new int[N+1][M+1];
         for (int i = 0; i <= N; i++) Arrays.fill(visited[i], -1);
 
+        dfs(0,0,0);
+        System.out.println(answer);
 
 
+    }
+
+    static void dfs(int idx, int usedTime, int score){
 
     }
 }
