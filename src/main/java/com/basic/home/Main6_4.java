@@ -1,47 +1,32 @@
 package com.basic.home;
 
 import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main6_4 {
-    public int[] solution(int size, int n , int[] arr){
-
-        int[] cache = new int[size];
-
-        int add=0;
-
-        for(int x : arr){
-            int pos=-1;
-            for(int i = 0; i<size; i++) if (x ==cache[i]) pos=i;
-
-            if(pos == -1){
-                for(int i = size-1; i >=1; i--){
-                    cache[i]=cache[i-1];
-                }
-                cache[0]=x;
-            }else{
-                for(int i = pos; i>=1; i--){
-                    cache[i]=cache[i-1];
-                }
-            }
-            cache[0]=x;
+    public static int findLastPrince(int N, int K) {
+        Queue<Integer> princes = new LinkedList<>();
+        for (int i = 1; i <= N; i++) {
+            princes.offer(i);
         }
 
-        return cache;
+        while (princes.size() > 1) {
+            for (int i = 1; i < K; i++) {
+                princes.offer(princes.poll()); // K-1번 회전
+            }
+            princes.poll(); // K번째 왕자 탈락
+        }
+
+        return princes.peek(); // 마지막으로 남은 왕자 반환
     }
 
-
     public static void main(String[] args) {
-        Main6_4 T = new Main6_4();
-        Scanner kb = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int K = scanner.nextInt();
+        scanner.close();
 
-        int s = kb.nextInt();
-        int n = kb.nextInt();
-
-        int[] arr = new int[n];
-
-        for (int i = 0; i < n; i++) arr[i] = kb.nextInt();
-        for (int x : T.solution(s, n, arr)) System.out.print(x + " ");
-
-
+        System.out.println(findLastPrince(N, K));
     }
 }

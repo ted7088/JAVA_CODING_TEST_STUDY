@@ -1,4 +1,4 @@
-package com.bj.coding;
+package com.basic.bj;
 import java.util.Scanner;
 
 public class BJ_1003 {
