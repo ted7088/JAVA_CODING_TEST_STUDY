@@ -47,7 +47,7 @@ public class Main9 {
             }
             return;
         }
-
+//dfs 사용
         dfs(numbers,target,index+1,sum+numbers[index]);
         dfs(numbers,target,index+1,sum-numbers[index]);
 
