@@ -23,6 +23,8 @@ public class Main12 {
             int r = cur[0], c = cur[1];
 
             if (r == n - 1 && c == m - 1) return dist[r][c]; // 조기 종료도 가능
+            System.out.println("현재 위치: (" + r + "," + c + "), 거리: " + dist[r][c]);
+
 
             for (int d = 0; d < 4; d++) {
                 int nr = r + DR[d];
@@ -37,6 +39,30 @@ public class Main12 {
             }
         }
         return -1;
+    }
+
+    // 🔍 테스트용 main (로컬에서만 사용)
+    public static void main(String[] args) {
+        Main12 sol = new Main12();
+
+        int[][] test1 = {
+                {1,0,1,1,1},
+                {1,0,1,0,1},
+                {1,0,1,1,1},
+                {1,1,1,0,1},
+                {0,0,0,0,1}
+        };
+
+        int[][] test2 = {
+                {1,0,1,1,1},
+                {1,0,1,0,1},
+                {1,0,1,1,1},
+                {1,1,1,0,0},
+                {0,0,0,0,1}
+        };
+
+        System.out.println(sol.solution(test1)); // 👉 11
+        System.out.println(sol.solution(test2)); // 👉 -1
     }
 
 }
