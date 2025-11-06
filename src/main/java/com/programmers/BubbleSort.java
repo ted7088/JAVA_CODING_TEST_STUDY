@@ -20,4 +20,28 @@ public class BubbleSort {
         }
     }
 
+
+    public int binarySearch (int arr[], int target) {
+
+        int low = 0;
+        int high = arr.length-1;
+
+
+        while(low <= high) {
+            int mid = low+(high-low)/2;
+
+            if(arr[mid]==target) {
+                return mid;  // 찾음
+            }
+            else if (arr[mid] < target) {
+                low = mid + 1;  // 오른쪽 구간으로 이동
+            } else {
+                high = mid - 1; // 왼쪽 구간으로 이동
+            }
+        }
+        return -1;  // 못 찾음
+    }
+
+
+
 }
