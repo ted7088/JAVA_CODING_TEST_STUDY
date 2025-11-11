@@ -13,7 +13,7 @@ public class BubbleSort {
                     int tmp = arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=tmp;
-                    swap=true;
+                    swap=true;  //swap
                 }
             }
             if (!swap) break; // 조기 종료
