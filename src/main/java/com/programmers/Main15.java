@@ -21,7 +21,7 @@ public class Main15 {
             else if (digit == 5) {
                 if (next >= 5) {
                     answer += 5;   // 올리기 선택
-                    storey += 5;
+                    storey += 5;  //올리기 선택
                 } else {
                     answer += 5;   // 내리기 선택
                 }
